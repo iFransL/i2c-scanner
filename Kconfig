@@ -1,0 +1,23 @@
+#
+# Copyright (c) 2020 Nordic Semiconductor ASA
+#
+# SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
+#
+
+menu "I2C Scanner settings"
+config I2C_SCAN_ADDR_START
+	int "First address to start scanning I2C devices."
+	default 8
+
+config I2C_SCAN_ADDR_STOP
+	int "Last address for scanning I2C devices."
+	default 127
+endmenu
+
+module = I2CScanner
+module-str = I2C Scanner Demo Application
+source "${ZEPHYR_BASE}/subsys/logging/Kconfig.template.log_config"
+
+menu "Zephyr Kernel"
+source "Kconfig.zephyr"
+endmenu

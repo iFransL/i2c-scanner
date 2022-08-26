@@ -1,0 +1,3 @@
+&arduino_i2c {
+	clock-frequency = <I2C_BITRATE_STANDARD>; 
+};

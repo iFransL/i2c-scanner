@@ -1,0 +1,13 @@
+/ {
+	aliases {
+		my-i2c = &i2c3;
+	};
+};
+
+&i2c3 {
+	status = "okay";
+	compatible = "nordic,nrf-twim";
+	sda-pin = <30>;
+	scl-pin = <31>;
+	clock-frequency = <I2C_BITRATE_FAST>; 
+};
